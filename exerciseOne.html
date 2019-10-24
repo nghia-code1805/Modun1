@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExerciseOne</title>
+</head>
+<body>
+
+<script>
+    function findmaxScore(max) {
+        var maxArray=max[0];
+        for (let i=0;i<max.length;i++)
+        {
+            if (max[i]>maxArray)
+            {
+                maxArray=max[i];
+            }
+        }
+        return maxArray;
+    }
+    let array=[10,5,2,8,-1,6,8];
+    let maxArray=findmaxScore(array);
+    alert("số lớp nhất trong mảng là "+maxArray+ " trong mảng "+ array);
+</script>>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="MyCanvas" width="500" height="600" style="border: 2px solid #000000;"></canvas>
+<script>
+    var canvas=document.getElementById("MyCanvas");
+    var ctx=canvas.getContext("2d");
+
+    function Shape(x,y,width,height,color) {
+        this.x=x;
+        this.y=y;
+        this.width=width;
+        this.height=height;
+        this.color=color;
+
+        this.getColor=function () {
+            return this.color="#000000";
+        };
+        this.render=function () {
+            ctx.beginPath();
+            ctx.strokeStyle=this.getColor();
+            ctx.strokeRect(this.x,this.y,this.width,this.height);
+            ctx.stroke();
+            ctx.closePath();
+        };
+    }
+    var shape=new Shape(20,20,300,100);
+    shape.render();
+</script>
+</body>
+</html>
